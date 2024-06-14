@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col-12">
+    <article id="cv">
+      <h2>Experiencia Laboral</h2>
+      <div *ngFor="let exp of expes">
+        <h3><strong>{{ exp.site }}</strong></h3>
+        <span class="date">{{ getMonthName(exp.startMonth) }} {{ exp.startYear }} - {{ getMonthName(exp.endMonth) }} {{ exp.endYear }}</span>
+        <ul>
+          <li *ngFor="let detail of exp.details">{{ detail }}</li>
+        </ul>
+        <br>
+      </div>
+    </article>
+  </div>
+
+  <div class="col-12">
+    <article id="cv">
+      <h2>Datos académicos</h2>
+      <div *ngFor="let es of estudios" class="study-item">
+        <h3><strong>{{ es.carrer }}</strong></h3>
+        <p class="location-date">
+          <span class="location">{{ es.location }}</span>
+          <span class="separator">|</span>
+          <span class="date">{{ getMonthName(es.startMonth) }} {{ es.startYear }} - {{ getMonthName(es.endMonth) }} {{ es.endYear }}</span>
+        </p>
+        <br>
+      </div>
+    </article>
+  </div>
+  
+
+  <div class="col-12">
+    <article id="cv">
+      <h2>Cursos</h2>
+      <div *ngFor="let curso of cursos; let i = index">
+        <h3><strong>{{ curso.name }}</strong></h3>
+        <p>Duracion: <i>{{ curso.hours }} horas </i> </p>
+        <ng-container *ngIf="curso.title; else noImage">
+          <button class="btn btn-success mb-5" (click)="toggleTitulo(i)">Mostrar/Ocultar título</button>
+          <img *ngIf="tituloOpenIndex.includes(i)" [src]="curso.title" alt="{{ curso.name }}" class="cutit">
+          <br>
+        </ng-container>
+        <ng-template #noImage>
+          <span>Estado: <i>{{ curso.estado }}</i></span>
+        </ng-template>
+        <br>
+      </div>
+    </article>
+  </div>
+</div>
+
+
