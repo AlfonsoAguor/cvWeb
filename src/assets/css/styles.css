@@ -284,6 +284,7 @@ footer {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
 
   .menu-toggle img{
