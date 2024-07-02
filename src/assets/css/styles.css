@@ -30,8 +30,10 @@ body{
 
 header {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  margin: 0px;
   height: 80px;
   background: rgba(61, 127, 60, 0.8);
   position: fixed;
@@ -42,10 +44,10 @@ header {
 
 header ul {
   display: flex;
-  justify-content: center;
+  align-items: center; /*commit 020724*/
+  margin-left: -48%;
   height: inherit;
   padding: 0;
-  margin: 33%;
 }
 
 header ul li {
@@ -71,10 +73,15 @@ header a:hover{
 
 /*Logo*/
 #logo{
-    font-family: 'rosthero';
-    
+  display: flex; /*commit 020724*/
+  align-items: center;
+  height: inherit;
+  margin-left: -20%;
+  font-family: 'rosthero';
 }
 #logo a{
+    display: flex; 
+    align-items: center;
     transition: color 500ms, transform 500ms;
     font-size: 30px;
 }
@@ -208,7 +215,7 @@ footer{
     }
 
     .skills-category {
-      margin-bottom: 20px;
+      margin-bottom: 40px;
     }
 
     .skills-category h2 {
@@ -270,13 +277,34 @@ footer{
 
 /* Estilos para pantallas aún más pequeñas */
 @media screen and (max-width: 575px) {
-    .menu-toggle li{
-        list-style: none;
-        position: absolute;
-        width: 50px;
-        margin-left: 70% ;
-        margin-top: -25px;
-    }
+.menu-toggle{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-toggle img{
+    display: flex;
+    align-self: flex-start;
+    margin-left: 15px;
+    width: 40px;
+    height: 40px;
+  }
+
+  #logo{
+    display: flex;
+    align-self: flex-end;
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+  }
+
+  #logo a{
+    font-size: 35px;
+    margin-top: 5px;
+  }
 
     #sidebar {
         width: 100%;
@@ -291,8 +319,9 @@ footer{
       font-size: 16px;
     }
     .menu {
-        top: 70px;
-        padding: 10px;
+      top: 70px;
+      padding: 10px;
+      height: 328%;
     }
 
     .menu li {
