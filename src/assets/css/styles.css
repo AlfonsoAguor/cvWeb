@@ -204,6 +204,10 @@ footer {
   border: solid 1px black;
 }
 
+#cv .cursodiv:last-child{
+  margin-top: 50px;
+}
+
 .skills-section {
   margin-top: 50px;
   text-align: center;
