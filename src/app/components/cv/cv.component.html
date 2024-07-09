@@ -32,7 +32,7 @@
   <div class="col-12">
     <article id="cv">
       <h2>Cursos</h2>
-      <div *ngFor="let curso of cursos; let i = index">
+      <div *ngFor="let curso of cursos; let i = index" class="cursodiv">
         <h3><strong>{{ curso.name }}</strong></h3>
         <p>Duracion: <i>{{ curso.hours }} horas </i> </p>
         <ng-container *ngIf="curso.title; else noImage">
