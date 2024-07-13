@@ -7,7 +7,7 @@ export class ExperienciaService {
 	constructor(){
 		this.expes=[
 			new Experiencia('Media Markt',4,2021,6,2021,['Reparación e instalacion de móviles y ordenadores.','Venta de productos informáticos.']),
-			new Experiencia('Servicomtel Telecomunicaciones S.L',4,2021,6,2021,['Instalación y mantenimiento de fibra optica','Configuracion y mantenimiento de redes.'])
+			new Experiencia('Servicomtel Telecomunicaciones S.L',3,2019,6,2019,['Instalación y mantenimiento de fibra optica','Configuracion y mantenimiento de redes.'])
 		]
 	}
 
